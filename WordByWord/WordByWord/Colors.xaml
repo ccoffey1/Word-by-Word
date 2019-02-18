@@ -1,0 +1,32 @@
+﻿<mah:MetroWindow x:Class="WordByWord.Colors"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                 xmlns:local="clr-namespace:WordByWord"
+                 xmlns:dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+                 xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                 dialog:DialogParticipation.Register="{Binding}"
+                 mc:Ignorable="d"
+                 Title="Info" Height="200" Width="400">
+    <DockPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <TextBlock Text="Accent color:" FontWeight="Bold" FontSize="30" VerticalAlignment="Center" Grid.Row="0" Margin="5"/>
+
+            <ComboBox x:Name="ColorsComboBox" FontWeight="Bold" FontSize="20" SelectionChanged="ColorsComboBox_SelectionChanged" Grid.Row="1" Margin="5" BorderBrush="Black" BorderThickness="2">
+                <ComboBoxItem>Blue</ComboBoxItem>
+                <ComboBoxItem>Red</ComboBoxItem>
+                <ComboBoxItem>Green</ComboBoxItem>
+            </ComboBox>
+
+            <Button x:Name="ColorsClose" IsCancel="True" Content="Close" Grid.Row="2" Height="30" Width="100" HorizontalAlignment="Right" Margin="0 0 5 0" BorderThickness="2" BorderBrush="Black"/>
+
+        </Grid>
+    </DockPanel>
+</mah:MetroWindow>

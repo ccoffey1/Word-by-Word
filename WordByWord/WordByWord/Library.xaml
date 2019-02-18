@@ -77,11 +77,11 @@
 
     <mah:MetroWindow.RightWindowCommands>
         <mah:WindowCommands>
-            <Button Command="{Binding OpenInfoCommand}">
+            <Button Command="{Binding OpenColorsCommand}">
                 <StackPanel Orientation="Horizontal">
-                    <iconPacks:PackIconModern Kind="InformationCircle" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <iconPacks:PackIconModern Kind="DrawBrushReflection" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </StackPanel>
-            </Button>            
+            </Button>
             <Button Command="{Binding SwapThemeCommand}">
                 <StackPanel Orientation="Horizontal">
                     <iconPacks:PackIconModern Kind="Contrast" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -105,4 +105,14 @@
             </Button>
         </mah:WindowCommands>
     </mah:MetroWindow.RightWindowCommands>
+
+    <mah:MetroWindow.LeftWindowCommands>
+        <mah:WindowCommands>
+            <Button Command="{Binding OpenInfoCommand}">
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconModern Kind="InformationCircle" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+        </mah:WindowCommands>
+    </mah:MetroWindow.LeftWindowCommands>
 </mah:MetroWindow>

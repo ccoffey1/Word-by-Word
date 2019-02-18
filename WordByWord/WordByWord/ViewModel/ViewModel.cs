@@ -98,6 +98,7 @@ namespace WordByWord.ViewModel
             AddDocumentCommand = new RelayCommand(AddDocumentContext);
             OpenEditorCommand = new RelayCommand(OpenEditorWindow, () => SelectedDocument != null && !SelectedDocument.IsBusy);
             OpenInfoCommand = new RelayCommand(OpenInfoWindow);
+            OpenColorsCommand = new RelayCommand(OpenColorsWindow);
             ConfirmEditCommand = new RelayCommand(ConfirmEdit);
             ReadSelectedDocumentCommand = new RelayCommand(async () =>
             {
@@ -167,6 +168,8 @@ namespace WordByWord.ViewModel
         public RelayCommand OpenEditorCommand { get; }
 
         public RelayCommand OpenInfoCommand { get; }
+
+        public RelayCommand OpenColorsCommand { get; }
 
         public RelayCommand AddDocumentCommand { get; }
 
@@ -917,6 +920,11 @@ namespace WordByWord.ViewModel
         private void OpenInfoWindow()
         {
             _windowService.ShowWindow("Info", this);
+        }
+
+        private void OpenColorsWindow()
+        {
+            _windowService.ShowWindow("Colors", this);
         }
 
         private void AddDocumentContext()

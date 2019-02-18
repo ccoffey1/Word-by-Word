@@ -14,6 +14,7 @@ namespace WordByWord.Services
         private Reader _reader;
         private InputText _inputText;
         private Info _info;
+        private Colors _colors;
 
         public void ShowWindow(string window, ViewModel.ViewModel viewModel)
         {
@@ -42,6 +43,10 @@ namespace WordByWord.Services
                     _info = new Info();
                     _info.ShowDialog();
                     break;
+                case "Colors":
+                    _colors = new Colors();
+                    _colors.ShowDialog();
+                    break;
             }
         }
 
@@ -67,6 +72,10 @@ namespace WordByWord.Services
                 case "Info":
                     _info?.Close();
                     _info = null;
+                    break;
+                case "Colors":
+                    _colors?.Close();
+                    _colors = null;
                     break;
             }
         }
